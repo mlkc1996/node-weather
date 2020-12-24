@@ -33,6 +33,7 @@ const createDom = (error, data) => {
     const precip = document.createElement("p")
     const weather = document.createElement("p")
     const temp = document.createElement("p")
+    const humid = document.createElement("p")
 
     if (error) {
         location.textContent = error
@@ -43,9 +44,11 @@ const createDom = (error, data) => {
     location.textContent = data.location
     precip.textContent = data.precipitation
     weather.textContent = data.weather
+    humid.textContent = data.humidity
 
     forecast.appendChild(location)
     forecast.appendChild(weather)
     forecast.appendChild(temp)
     forecast.appendChild(precip)
+    forecast.appendChild(humid)
 }
