@@ -11,7 +11,7 @@ fetch("http://puzzle.mead.io/puzzle", {}).then((response) => {
 const weatherForm = document.querySelector("form")
 weatherForm.addEventListener("submit", (e) => {
     e.preventDefault()
-    fetch(`http://localhost:3000/weather?location=${e.target.elements.searchLocation.value}`, {}).then((response) => {
+    fetch(`/weather?location=${e.target.elements.searchLocation.value}`, {}).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error)
