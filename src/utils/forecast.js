@@ -8,11 +8,12 @@ const forecast = ({ latitide, longitude }, callback) => {
         } else if (response.body.success === false) {
             callback("Try another lat/lon", undefined)
         } else {
-            const { temperature, weather_descriptions: weather, precip: precipitation } = response.body.current
+            const { temperature, weather_descriptions: weather, precip: precipitation, humidity } = response.body.current
             callback(undefined, {
                 temperature,
                 weather,
-                precipitation
+                precipitation,
+                humidity
             })
         }
     })

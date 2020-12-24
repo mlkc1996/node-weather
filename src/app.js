@@ -55,7 +55,8 @@ app.get("/weather", (req, res) => {
                 location: data.location,
                 temperature: `${forecastData.temperature} degree Celcius`,
                 weather: forecastData.weather[0],
-                precipitation: `${forecastData.precipitation} mm`
+                precipitation: `${forecastData.precipitation} mm`,
+                humidity: `${forecastData.humidity} %`
             })
         })
     })
